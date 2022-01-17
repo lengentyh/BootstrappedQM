@@ -1,10 +1,10 @@
-# BootstrappedQM
+# 🧭 BootstrappedQM
 
-Final project of QM 1 course at NTU during fall 2021, in which the spectrum of spinless Hydrogen electron is solved through bootstrap method.
+Final project of QM 1 course at NTU during fall 2021, in which the spectrum of **spinless Hydrogen electron** is solved through bootstrap method.
 
-## Getting Started
+## 🔰 Getting Started
 
-(1.) Prepare the inputs in 'main.m'
+1️⃣ Prepare the inputs in 'main.m'
 
 ```Matlab
 %% Input
@@ -17,14 +17,14 @@ digt = 32;   % numerical precision used
 np   = 6;    % number of cpus for parallel computation
 ```
 
-(2.) run 'main.m'
+2️⃣ run 'main.m'
 
 ```Matlab
 >> main.m
 ```
 
-(3.) run 'Plot.m' to see the results
+3️⃣ run 'Plot.m' to see the results
 
 ```Matlab
->. Plot.m
+>> Plot.m
 ```
