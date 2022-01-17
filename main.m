@@ -49,8 +49,9 @@ parfor e = 1:nE % can use parallel computation to accelerate
 
     for i = 1:k % distinguish the positivity of all principle minor
         detM(e,i)      = int8(sign(det(M_rescale(1:i,1:i))));
-        if detM(e,i)<0
-            continue
+        % throw away the energies that do not preserve the positivity
+        if detM(e,i)<0 
+            break
         end
     end
 end
