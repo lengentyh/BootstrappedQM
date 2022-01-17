@@ -28,7 +28,7 @@ end
 Ewin = Emin:dE:Emax;
 nE   = length(Ewin);
 detM = int8(zeros(nE,k));
-cond = int8(zeros(nE,1));
+cond = int8(zeros(nE,k));
 
 %% Open the parallel pool
 c = parcluster('local');
@@ -55,13 +55,16 @@ parfor e = 1:nE % can use parallel computation to accelerate
         end
     end
 end
+
 % find the energy levels that have all the priciple minors being positive-definite
-cond(find(sum(detM,2)==k)) = 1;
+for i = 1:k
+    cond(find(sum(detM,2)==i),i) = 1;
+end
 
 toc
 fprintf('End scanning. \n')
 
-save determinant.mat cond Ewin Emin Emax
+save determinant.mat cond Ewin Emin Emax k
 
 % %% close the parallel pool
 % poolobj = gcp('nocreate');

@@ -8,8 +8,11 @@ load determinant.mat
 hold on
 
 % the determiant
-plot(Ewin,cond,'b-')
-axis([Emin Emax 0 1])
-xticks([Emin:0.5:Emax]);
+for i = 1:k
+    plot(Ewin,cond(:,i))
+end
 
 hold off
+
+axis([Emin Emax 0 1])
+xticks([Emin:0.5:Emax]);
