@@ -1,13 +1,13 @@
 %% QM1 (fall,2021) final project
 
 %% Input
-Emin = -14;
-Emax = 0;
-dE   = 0.001; % number of sample points inside the energy window
-l    = 1;    % orbital angular momentum
-k    = 20;   % size of the principle minor
-digt = 32;   % numerical precision
-np   = 6;    % number of cpus for parallel computation
+Emin = -14;   % lower bound of the energy window
+Emax = 0;     % upper bound of the energy window
+dE   = 0.001; % energy difference for each scanning step 
+l    = 1;     % orbital angular momentum
+k    = 20;    % size of the principle minor
+digt = 32;    % numerical precision
+np   = 6;     % number of cpus for parallel computation
 
 if Emin > Emax
     fprintf('Emin must <= Emax !!! \n')
