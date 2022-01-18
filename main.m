@@ -58,7 +58,7 @@ end
 
 % find the energy levels that have all the priciple minors being positive-definite
 for i = 1:k
-    cond(find(sum(detM,2)==i),i) = 1;
+    cond(find(sum(detM,2)>=i),i) = 1;
 end
 
 toc
