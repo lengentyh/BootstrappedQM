@@ -3,21 +3,24 @@
 %% Load data
 load determinant.mat
 
-
-%% Real procedure
 hold on
 % the determiant
 for i = 1:k
-    if mod(i,10) == 0
-        %plot(log(-Ewin),cond(:,i))
-        plot(Ewin,k*cond(:,i))
+    if i == 10
+        p1 = plot(log(-Ewin),k*cond(:,i));
+        %plot(Ewin,k*cond(:,i))
+    elseif i == 20
+        p2 = plot(log(-Ewin),k*cond(:,i),'g');
+    elseif i == 30
+        p3 = plot(log(-Ewin),k*cond(:,i));
     end
 end
-%legend('K=10','K=20','K=30','Location','eastoutside')
+legend([p1,p2,p3],{'K=10','K=20','K=30'},'Location','eastoutside')
 %axis([Emin Emax 0 1])
-%xticks([Emin:0.05:Emax]);
+xticks([-10:0.5:-2]);
 hold off
 
+%% Real procedure
 %% find the spectrum island for each principle minor
 cond      = double(cond);
 land      = cell(k,1);
@@ -40,6 +43,7 @@ end
 
 hold on
 for i = 1:k
-    plot(Ewin(land{i}),i*ones(length(Ewin(land{i})),1),'b.')
+    plot(log(-Ewin(land{i})),i*ones(length(Ewin(land{i})),1),'b.')
+    %plot(Ewin(land{i}),i*ones(length(Ewin(land{i})),1),'b.')
 end
 hold off

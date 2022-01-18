@@ -1,13 +1,15 @@
 %% QM1 (fall,2021) final project
 
 %% Input
-Emin = -14;   % lower bound of the energy window
-Emax = 0;     % upper bound of the energy window
-dE   = 0.001; % energy difference for each scanning step 
-l    = 1;     % orbital angular momentum
-k    = 20;    % size of the principle minor
-digt = 32;    % numerical precision
-np   = 6;     % number of cpus for parallel computation
+wcal = ReadInput('input.txt');
+
+Emin = wcal.Emin;    % lower bound of the energy window
+Emax = wcal.Emax;    % upper bound of the energy window
+dE   = wcal.dE;      % energy difference for each scanning step 
+l    = wcal.l;       % orbital angular momentum
+k    = wcal.k;       % size of the moment matrix
+digt = wcal.digt;    % numerical precision
+np   = wcal.ncpu;    % number of cpus for parallel computation
 
 if Emin > Emax
     fprintf('Emin must <= Emax !!! \n')
@@ -41,7 +43,7 @@ parpool(c, c.NumWorkers);
 %% Real procedure
 tic
 fprintf('Start scanning ... \n')
-parfor e = 1:nE % can use parallel computation to accelerate
+parfor e = 1:nE
     M                  = exp_M(Ewin(e),k,l,digt);
     M_rescale          = M;
     M_rescale(:,1:end) = M_rescale(:,1:end)./M(:,1);
@@ -66,6 +68,6 @@ fprintf('End scanning. \n')
 
 save determinant.mat cond Ewin Emin Emax k
 
-% %% close the parallel pool
-% poolobj = gcp('nocreate');
-% delete(poolobj);
+%% close the parallel pool
+poolobj = gcp('nocreate');
+delete(poolobj);
