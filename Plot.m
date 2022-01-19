@@ -7,17 +7,28 @@ hold on
 % the determiant
 for i = 1:k
     if i == 10
-        p1 = plot(log(-Ewin),k*cond(:,i));
-        %plot(Ewin,k*cond(:,i))
+        %p1 = plot(log(-Ewin),k*cond(:,i));
+        %p1 = plot(Ewin,k*cond(:,i));
     elseif i == 20
-        p2 = plot(log(-Ewin),k*cond(:,i),'g');
+        %p2 = plot(log(-Ewin),k*cond(:,i),'g');
+        %p2 = plot(Ewin,k*cond(:,i),'g');
     elseif i == 30
-        p3 = plot(log(-Ewin),k*cond(:,i));
+        %p3 = plot(log(-Ewin),k*cond(:,i));
+        %p3 = plot(Ewin,k*cond(:,i));
     end
 end
-legend([p1,p2,p3],{'K=10','K=20','K=30'},'Location','eastoutside')
+%legend([p1,p2,p3],{'K=10','K=20','K=30'},'Location','eastoutside')
 %axis([Emin Emax 0 1])
-xticks([-10:0.5:-2]);
+%xticks([-10:0.5:-2]);
+xticks([Emin:0.005:Emax]);
+
+xline(-0.5/4);
+xline(-0.5/9);
+xline(-0.5/16);
+xline(-0.5/25);
+xline(-0.5/36);
+xline(-0.5/49);
+
 hold off
 
 %% Real procedure
@@ -43,7 +54,7 @@ end
 
 hold on
 for i = 1:k
-    plot(log(-Ewin(land{i})),i*ones(length(Ewin(land{i})),1),'b.')
-    %plot(Ewin(land{i}),i*ones(length(Ewin(land{i})),1),'b.')
+    %plot(log(-Ewin(land{i})),i*ones(length(Ewin(land{i})),1),'b.')
+    plot(Ewin(land{i}),i*ones(length(Ewin(land{i})),1),'b.')
 end
 hold off
