@@ -1,0 +1,12 @@
+Bootstrap
+
+wcal.Emin   = -0.15
+wcal.Emax   = 0
+wcal.dE     = 1e-5
+wcal.l      = 2
+wcal.k      = 30
+wcal.digt   = 32  
+wcal.ncpu   = 6
+
+endBootstrap
+
