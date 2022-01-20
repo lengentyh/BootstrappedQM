@@ -45,3 +45,7 @@ load determinant.mat
 ```Matlab
 >> Plot.m
 ```
+
+## Examples
+
+To repeat the implementation results in the paper, plese use the input.txt in the folder [inputs](./inputs) and the corresponding .mat file in the folder [results](./results). Still, one should ajust the graph in 'Plot.m' by himself/herself.
