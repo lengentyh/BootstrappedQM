@@ -1,6 +1,6 @@
 # 🧭 BootstrappedQM
 
-Final project of QM 1 course at NTU during fall 2021, in which the spectrum of **spinless Hydrogen electron** is solved through bootstrap method.
+[Final project](./QM_Final_Project.pdf) of QM 1 course at NTU during fall 2021, in which the spectrum of **spinless Hydrogen electron** is solved through bootstrap method.
 
 ## 🔰 Getting Started
 
@@ -46,6 +46,8 @@ load determinant.mat
 >> Plot.m
 ```
 
-## Examples
+## 🏁 Examples
 
 To repeat the implementation results in the paper, plese use the input.txt in the folder [inputs](./inputs) and the corresponding .mat file in the folder [results](./results). Still, one should ajust the graph in 'Plot.m' by himself/herself.
+
+## 📓 [References](./references)
