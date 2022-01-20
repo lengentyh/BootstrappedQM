@@ -4,6 +4,8 @@
 
 ## 📜 [The_Report](./QM1_Final_Project_BootstrapQM.pdf)
 
+## ⚖️ [LICENSE](./LICENSE)
+
 ## 🔰 Getting Started
 
 0️⃣ Prepare the inputs in 'input.txt'
