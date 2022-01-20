@@ -2,7 +2,7 @@
 
 [Final project](./QM_Final_Project.pdf) of QM 1 course at NTU, Taipei during fall 2021, in which the spectrum of **spinless Hydrogen electron** is solved through bootstrap method.
 
-## 📜 [The_Report](./QM_Final_Project_BootstrapQM.pdf)
+## 📜 [The_Report](./QM1_Final_Project_BootstrapQM.pdf)
 
 ## 🔰 Getting Started
 
