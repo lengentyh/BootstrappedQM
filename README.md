@@ -8,7 +8,7 @@
 
 ## 🔰 Getting Started
 
-0️⃣ Prepare the inputs in 'input.txt'
+0️⃣ Prepare the inputs in 'input.txt'.
 
 ```txt
 Bootstrap
@@ -24,27 +24,27 @@ wcal.ncpu   = 6      % number of cpus for parallel computation
 endBootstrap
 ```
 
-1️⃣ Choose the input file in 'main.m'
+1️⃣ Write the chosen input file in 'main.m'.
 
 ```Matlab
 %% Input
 wcal = ReadInput('input.txt');
 ```
 
-2️⃣ Run 'main.m'
+2️⃣ Run 'main.m' to scan the spectrum.
 
 ```Matlab
 >> main.m
 ```
 
-3️⃣ Choose the data file in 'Plot.m'
+3️⃣ Write the chosen data file in 'Plot.m'.
 
 ```Matlab
 %% Load data
 load determinant.mat
 ```
 
-4️⃣ Run 'Plot.m' to see the results
+4️⃣ Run 'Plot.m' to see the results.
 
 ```Matlab
 >> Plot.m
@@ -52,6 +52,6 @@ load determinant.mat
 
 ## 🏁 Examples
 
-To repeat the implementation results in the paper, plese use the input.txt in the folder [inputs](./inputs) and the corresponding .mat file in the folder [results](./results). Still, one should ajust the graph in 'Plot.m' by himself/herself.
+To repeat the implementation results in the paper, plese use the input.txt in the folder [inputs](./inputs) and the corresponding .mat file in the folder [results](./results). Still, one should adjust the graph in 'Plot.m' by himself/herself.
 
 ## 📓 [References](./references)
