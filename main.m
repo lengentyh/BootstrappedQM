@@ -29,8 +29,8 @@ end
 %% Initialization
 Ewin = Emin:dE:Emax;
 nE   = length(Ewin);
-detM = int8(zeros(nE,k));
-cond = int8(zeros(nE,k));
+detM = zeros(nE,k,'int8');
+cond = zeros(nE,k,'int8');
 
 %% Open the parallel pool
 c = parcluster('local');
